@@ -9,10 +9,10 @@ function validateForm(){
   var twitter = document.getElementById('input-social');
 
 // Para validaciones de letras y cosas del nombre...
-  var soloLetras = /^[a-zñÑA-Z]*$/;
+  var soloLetras = /^[a-zñá-ú+\s]*$/;
   var mayus = /^[A-Z]{1}/;
 
-// Descativo funciones y dejo condicionales
+// Desactivo funciones y dejo condicionales
 // porque no corren con las funciones!!!!! T_T
 
 // Estos son los obligatorios. Sin buscar el botón.
