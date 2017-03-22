@@ -9,7 +9,7 @@ function validateForm(){
   var twitter = document.getElementById('input-social');
 
 // Para validaciones de letras y cosas del nombre...
-  var soloLetras = /^[a-zñá-ú+\s]*$/;
+  var soloLetras = /^([a-zñá-ú+\s])*$/;
   var mayus = /^[A-Z]{1}/;
 
 // Desactivo funciones y dejo condicionales
@@ -31,7 +31,7 @@ function validateForm(){
     //obligados();
 
     //function adicionales(){
-      if(nombre.value.search(soloLetras) || apellido.value.search(soloLetras)){
+      if(soloLetras.test(nombre.value) || soloLetras.test(apellido.value)){
         alert("Ingrese solo letras en Nombre y/o Apellido");}
       else if(nombre.value.search(mayus)){
         alert("La primera letra de tu nombre debe ser mayúscula");}
